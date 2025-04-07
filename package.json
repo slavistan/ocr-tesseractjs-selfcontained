@@ -1,6 +1,6 @@
 {
   "name": "ocr-tesseractjs-selfcontained",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Self-contained, bundled wrapper of tesseract.js for the web.",
   "license": "MIT",
   "author": "",
