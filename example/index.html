@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OCR Test</title>
+  </head>
+  <body>
+    <div>
+      <h1>Tesseract.js OCR Test</h1>
+      <img
+        id="sourceImage"
+        src="img.jpg",
+        style="max-width: 400px"
+      />
+      <pre id="output">OCR output will appear here...</pre>
+    </div>
+    <script type="module">
+      import { ocr } from "./index.js";
+      try {
+        const pngArrayBuffer = document.getElementById("sourceImage");
+        const result = await ocr(pngArrayBuffer);
+        document.getElementById("output").textContent = result;
+      } catch (err) {
+        document.getElementById("output").textContent = "Error: " + err;
+        console.error("Error performing OCR:", JSON.stringify(err, null, 2));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "ocr-tesseractjs-selfcontained",
+  "version": "0.0.2",
+  "description": "Self-contained, bundled wrapper of tesseract.js for the web.",
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "download-assets": "node ./scripts/download-assets.mjs",
+    "example": "ln -sf ../dist/index.js ./example/index.js; npx serve -S ./example/"
+  },
+  "dependencies": {
+    "idb-keyval": "^6.2.1",
+    "tesseract.js": "^6.0.0",
+    "wasm-feature-detect": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.17",
+    "esbuild": "^0.25.2",
+    "serve": "^14.2.4",
+    "typescript": "^5.8.2"
+  }
+}
