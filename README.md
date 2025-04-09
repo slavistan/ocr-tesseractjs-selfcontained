@@ -21,13 +21,13 @@ npm i
 # - deu.traineddata file
 # - Tesseract.js core wasm module (lstm-only, simd and non-simd version)
 # - Tesseract.js worker code
-npx download-assets
+npm run download-assets
 
 # Builds a single file self-contained library exposing a single function that wraps tesseract.js.
-npx build
+npm run build
 
 # Run an example.
-npx example
+npm run example
 
 # Publish to npm
 npm publish
